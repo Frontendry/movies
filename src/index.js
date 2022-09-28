@@ -1,12 +1,33 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+// Node Modules
+import React from "react";
+import ReactDOM from "react-dom/client";
+import { createBrowserRouter, RouterProvider, Route } from "react-router-dom";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+// Report Vitals
+import reportWebVitals from "./reportWebVitals";
+
+// Main Stylesheet
+import "./index.css";
+
+// Components
+import App from "./App";
+import Genre from "./components/pages/Genres";
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <App />,
+  },
+  {
+    path: "genre/:genreName",
+    element: <Genre />,
+  },
+]);
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
+    {/* <RouterProvider router={router} /> */}
     <App />
   </React.StrictMode>
 );
