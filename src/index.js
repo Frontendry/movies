@@ -1,7 +1,7 @@
 // Node Modules
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { createBrowserRouter, RouterProvider, Route } from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 // Report Vitals
 import reportWebVitals from "./reportWebVitals";
@@ -12,23 +12,31 @@ import "./index.css";
 // Components
 import App from "./App";
 import Genre from "./components/pages/Genres";
+import { FilmsContextProvider } from "./context/filmsContextStore";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App />,
+    element: (
+      <FilmsContextProvider>
+        <App />
+      </FilmsContextProvider>
+    ),
   },
   {
     path: "genre/:genreName",
-    element: <Genre />,
+    element: (
+      <FilmsContextProvider>
+        <Genre />
+      </FilmsContextProvider>
+    ),
   },
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    {/* <RouterProvider router={router} /> */}
-    <App />
+    <RouterProvider router={router} />
   </React.StrictMode>
 );
 
