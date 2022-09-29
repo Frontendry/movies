@@ -3,9 +3,9 @@ import Home from "./components/pages/Home/Home";
 
 function App() {
   return (
-    <div className="App">
+    <main className="min-h-screen bg-slate-900">
       <Home />
-    </div>
+    </main>
   );
 }
 

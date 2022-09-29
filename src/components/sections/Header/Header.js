@@ -1,0 +1,20 @@
+// Node Modules
+import { Link } from "react-router-dom";
+
+// Components
+import Navigation from "../../general-components/Navigation/Navigation";
+
+const Header = () => {
+  return (
+    <header>
+      <div className="container mx-auto px-7 py-8 flex items-center">
+        <h1 className="text-white font-bold text-4xl">
+          <Link to="/">Movie Collection</Link>
+        </h1>
+        <Navigation />
+      </div>
+    </header>
+  );
+};
+
+export default Header;
