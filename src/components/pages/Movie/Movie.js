@@ -22,7 +22,7 @@ const Movie = () => {
   return (
     <main className="min-h-screen bg-slate-900">
       <Header />
-      <MovieFull movieData={movieSelected} />
+      {movieSelected && <MovieFull movieData={movieSelected} />}
     </main>
   );
 };
