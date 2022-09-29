@@ -10,10 +10,13 @@ import reportWebVitals from "./reportWebVitals";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import "./index.css";
 
+// Context Provider
+import { FilmsContextProvider } from "./context/filmsContextStore";
+
 // Components
 import App from "./App";
 import Genre from "./components/pages/Genres/Genres";
-import { FilmsContextProvider } from "./context/filmsContextStore";
+import Movie from "./components/pages/Movie/Movie";
 
 const router = createBrowserRouter([
   {
@@ -29,6 +32,14 @@ const router = createBrowserRouter([
     element: (
       <FilmsContextProvider>
         <Genre />
+      </FilmsContextProvider>
+    ),
+  },
+  {
+    path: "movie/:imdbId",
+    element: (
+      <FilmsContextProvider>
+        <Movie />
       </FilmsContextProvider>
     ),
   },

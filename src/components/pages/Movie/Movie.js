@@ -1,7 +1,30 @@
-import React from "react";
+// React Router Modules
+import { useParams } from "react-router-dom";
+
+// Context Store
+import { useFilmsContext } from "../../../context/filmsContextStore";
+
+// Components
+import Header from "../../sections/Header/Header";
+import MovieFull from "../../general-components/Movies/MovieFull";
 
 const Movie = () => {
-  return <div>Movie</div>;
+  // Get Param Name
+  const { imdbId } = useParams();
+
+  // All Films
+  const { allFilms } = useFilmsContext();
+
+  // Filter Selected Movie
+  const movieSelected =
+    allFilms && allFilms.find((film) => film.imdbID === imdbId);
+
+  return (
+    <main className="min-h-screen bg-slate-900">
+      <Header />
+      <MovieFull movieData={movieSelected} />
+    </main>
+  );
 };
 
 export default Movie;

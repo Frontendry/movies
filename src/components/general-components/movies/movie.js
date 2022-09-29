@@ -2,7 +2,7 @@
 import { Link } from "react-router-dom";
 
 const Movie = ({ movieData }) => {
-  const { Title, Year, imdbID, PosterNew } = movieData;
+  const { Title, Year, imdbID, PosterNew, Runtime } = movieData;
   return (
     <article>
       {PosterNew && (
@@ -20,7 +20,11 @@ const Movie = ({ movieData }) => {
           </h3>
         )}
 
-        {Year && <span className="text-slate-500 block text-sm">{Year}</span>}
+        <div className="flex items-center">
+          {Year && <span className="text-slate-500 text-sm">{Year}</span>}{" "}
+          <span className="w-px h-3 mx-2 bg-slate-500"></span>
+          {Runtime && <span className="text-slate-500 text-sm">{Runtime}</span>}
+        </div>
       </div>
     </article>
   );
