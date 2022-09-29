@@ -53,13 +53,20 @@ const SearchForm = () => {
   }, [allFilms, searchQuery, setSearchedData, debouncedChangeHandler]);
 
   return (
-    <form>
-      <input
-        type="search"
-        placeholder="Search Here"
-        onChange={debouncedChangeHandler}
-        ref={inputRef}
-      />
+    <form className="w-1/2 mx-auto h-14 bg-white rounded-full overflow-hidden">
+      <label className="relative w-full h-full flex items-center">
+        <span className="sr-only">Search</span>
+        <span className="absolute inset-y-0 left-0 flex items-center pl-2">
+          <i className="bi bi-search text-2xl px-3"></i>
+        </span>
+        <input
+          className="placeholder:italic placeholder:text-slate-400 block bg-white w-full h-full border border-slate-300 rounded-md py-2 pl-14 pr-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm"
+          type="search"
+          placeholder="Search Here"
+          onChange={debouncedChangeHandler}
+          ref={inputRef}
+        />
+      </label>
     </form>
   );
 };
