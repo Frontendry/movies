@@ -2,11 +2,19 @@
 import { useMemo, useState, useEffect, useRef } from "react";
 import debounce from "lodash.debounce";
 
+// Context
+import { useFilmsContext } from "../../../context/filmsContextStore";
+import { useSearchContext } from "../../../context/searchContextStore";
+
 const SearchForm = () => {
+  // Get All Films
+  const { allFilms } = useFilmsContext();
+
+  // Searched Data State
+  const { setSearchedData } = useSearchContext();
+
   const [searchQuery, setSearchQuery] = useState("");
   const debounceDelay = 500;
-
-  const fetchData = (queryStr) => {};
 
   const changeHandler = (event) => {
     setSearchQuery(event.target.value);
@@ -23,13 +31,25 @@ const SearchForm = () => {
     // Update Value of inputRef. Controlled inputs is buggy with useMemo.
     inputRef.current.value = searchQuery;
 
-    fetchData(searchQuery);
+    const fetchData = (films, queryStr) => {
+      const queriedFilms =
+        films &&
+        films.filter((film) =>
+          film.Title
+            ? film.Title.toLowerCase().includes(queryStr.toLowerCase())
+            : film
+        );
+
+      setSearchedData(queriedFilms);
+    };
+
+    fetchData(allFilms, searchQuery);
 
     // Cleanup. Stop the invocation of the debounced function after unmounting
     return () => {
       debouncedChangeHandler.cancel();
     };
-  }, [searchQuery, debouncedChangeHandler]);
+  }, [allFilms, searchQuery, setSearchedData, debouncedChangeHandler]);
 
   return (
     <form>
@@ -37,6 +57,7 @@ const SearchForm = () => {
         type="search"
         placeholder="Search Here"
         onChange={debouncedChangeHandler}
+        ref={inputRef}
       />
     </form>
   );

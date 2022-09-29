@@ -20,4 +20,4 @@ export const SearchContextProvider = ({ children }) => {
 };
 
 // Custom Hook for useContext
-export const useFilmsContext = () => useContext(searchContext);
+export const useSearchContext = () => useContext(searchContext);

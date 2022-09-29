@@ -1,7 +1,9 @@
-import React from "react";
-
-const SearchResults = () => {
-  return <ul></ul>;
+const SearchResults = ({ filmsData }) => {
+  return (
+    <ul>
+      <li>kuna movie</li>
+    </ul>
+  );
 };
 
 export default SearchResults;
