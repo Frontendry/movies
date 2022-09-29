@@ -6,7 +6,7 @@ import NoSearchResult from "./NoSearchResult";
 // Components
 
 const SearchDropDown = () => {
-  const { searchedData } = useSearchContext;
+  const { searchedData } = useSearchContext();
 
   return (
     <div className="absolute left-0 bottom-0">

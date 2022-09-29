@@ -13,7 +13,9 @@ const SearchForm = () => {
   // Searched Data State
   const { setSearchedData } = useSearchContext();
 
+  // Search Query State
   const [searchQuery, setSearchQuery] = useState("");
+
   const debounceDelay = 500;
 
   const changeHandler = (event) => {
@@ -32,18 +34,17 @@ const SearchForm = () => {
     inputRef.current.value = searchQuery;
 
     const fetchData = (films, queryStr) => {
-      const queriedFilms =
-        films &&
-        films.filter((film) =>
-          film.Title
-            ? film.Title.toLowerCase().includes(queryStr.toLowerCase())
-            : film
-        );
+      const queriedFilms = films.filter((film) =>
+        film.Title.toLowerCase().includes(queryStr.toLowerCase())
+      );
 
+      if (queryStr === "") {
+        setSearchedData([]);
+      }
       setSearchedData(queriedFilms);
     };
 
-    fetchData(allFilms, searchQuery);
+    allFilms.length && searchQuery !== "" && fetchData(allFilms, searchQuery);
 
     // Cleanup. Stop the invocation of the debounced function after unmounting
     return () => {

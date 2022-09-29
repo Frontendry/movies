@@ -1,7 +1,9 @@
 const SearchResults = ({ filmsData }) => {
   return (
     <ul>
-      <li>kuna movie</li>
+      {filmsData.map((film) => (
+        <li key={film.imdbID}>{film.Title}</li>
+      ))}
     </ul>
   );
 };
