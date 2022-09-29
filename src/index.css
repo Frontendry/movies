@@ -1,3 +1,14 @@
 @tailwind base;
 @tailwind components;
+@layer components {
+  .has-dropdown {
+   @apply relative
+  }
+  .has-dropdown:hover ul {
+      @apply opacity-100 visible transition-all
+  }
+  .has-dropdown ul {
+      @apply opacity-0 invisible
+  }
+}
 @tailwind utilities;

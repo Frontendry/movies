@@ -6,7 +6,7 @@ import Navigation from "../../general-components/Navigation/Navigation";
 
 const Header = () => {
   return (
-    <header>
+    <header className="relative z-50">
       <div className="container mx-auto px-7 py-8 flex items-center">
         <h1 className="text-white font-bold text-4xl">
           <Link to="/">Movie Collection</Link>
