@@ -1,5 +1,5 @@
 // Node Modules
-import { useMemo, useState, useEffect, useRef } from "react";
+import { useMemo, useState, useEffect } from "react";
 import debounce from "lodash.debounce";
 
 // Context
@@ -11,7 +11,7 @@ const SearchForm = () => {
   const { allFilms } = useFilmsContext();
 
   // Searched Data State
-  const { setSearchedData } = useSearchContext();
+  const { inputRef, setSearchedData } = useSearchContext();
 
   // Search Query State
   const [searchQuery, setSearchQuery] = useState("");
@@ -26,8 +26,6 @@ const SearchForm = () => {
     () => debounce(changeHandler, debounceDelay),
     []
   );
-
-  const inputRef = useRef();
 
   useEffect(() => {
     // Update Value of inputRef. Controlled inputs is buggy with useMemo.
@@ -50,7 +48,13 @@ const SearchForm = () => {
     return () => {
       debouncedChangeHandler.cancel();
     };
-  }, [allFilms, searchQuery, setSearchedData, debouncedChangeHandler]);
+  }, [
+    inputRef,
+    allFilms,
+    searchQuery,
+    setSearchedData,
+    debouncedChangeHandler,
+  ]);
 
   return (
     <form className="w-full h-14 bg-white rounded-full overflow-hidden">
