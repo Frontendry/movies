@@ -6,7 +6,7 @@ const SearchResults = ({ filmsData }) => {
       {filmsData.map((film) => (
         <li key={film.imdbID}>
           <Link
-            to={`movie/${film.imdbID}`}
+            to={`/movie/${film.imdbID}`}
             className="p-3 border-b border-slate-400 block"
           >
             {film.Title}

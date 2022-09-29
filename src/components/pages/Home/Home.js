@@ -10,11 +10,11 @@ const Home = () => {
   // Get All Films
   const { allFilms } = useFilmsContext();
   return (
-    <>
+    <main className="min-h-screen bg-slate-900">
       <Header />
       <SearchWrapper />
       <Movies moviesCollection={allFilms} collectionTitle="Latest Movies" />
-    </>
+    </main>
   );
 };
 

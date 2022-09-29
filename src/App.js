@@ -2,11 +2,7 @@
 import Home from "./components/pages/Home/Home";
 
 function App() {
-  return (
-    <main className="min-h-screen bg-slate-900">
-      <Home />
-    </main>
-  );
+  return <Home />;
 }
 
 export default App;

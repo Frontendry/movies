@@ -2,12 +2,12 @@
 import { Link } from "react-router-dom";
 
 const Movie = ({ movieData }) => {
-  const { Title, Year, imdbID, Genre, PosterNew } = movieData;
+  const { Title, Year, imdbID, PosterNew } = movieData;
   return (
     <article>
       {PosterNew && (
         <figure>
-          <Link to={`movie/${imdbID}`}>
+          <Link to={`/movie/${imdbID}`}>
             <img src={PosterNew} alt={Title} />
           </Link>
         </figure>
@@ -16,7 +16,7 @@ const Movie = ({ movieData }) => {
       <div className="mt-2">
         {Title && (
           <h3 className="font-bold text-white mb-2">
-            <Link to={`movie/${imdbID}`}>{Title}</Link>{" "}
+            <Link to={`/movie/${imdbID}`}>{Title}</Link>{" "}
           </h3>
         )}
 

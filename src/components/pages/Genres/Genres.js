@@ -6,6 +6,8 @@ import { useFilmsContext } from "../../../context/filmsContextStore";
 
 // Components
 import Movies from "../../general-components/Movies/Movies";
+import Header from "../../sections/Header/Header";
+import SearchWrapper from "../../sections/Search/SearchWrapper";
 
 const Genre = () => {
   // Get Param Name
@@ -24,12 +26,14 @@ const Genre = () => {
     allFilms.filter((film) => film.Genre.toLowerCase().includes(genreName));
 
   return (
-    <>
+    <main className="min-h-screen bg-slate-900">
+      <Header />
+      <SearchWrapper />
       <Movies
         moviesCollection={genreNameCollection}
         collectionTitle={capitalizeGenreName}
       />
-    </>
+    </main>
   );
 };
 
