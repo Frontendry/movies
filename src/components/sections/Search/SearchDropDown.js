@@ -9,7 +9,7 @@ const SearchDropDown = () => {
   const { searchedData } = useSearchContext();
 
   return (
-    <div className="absolute left-0 bottom-0">
+    <div className="absolute left-10 right-10 top-full bg-slate-500 text-white">
       {searchedData && searchedData.length ? (
         <SearchResults filmsData={searchedData} />
       ) : (

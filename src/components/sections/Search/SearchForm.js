@@ -53,7 +53,7 @@ const SearchForm = () => {
   }, [allFilms, searchQuery, setSearchedData, debouncedChangeHandler]);
 
   return (
-    <form className="w-1/2 mx-auto h-14 bg-white rounded-full overflow-hidden">
+    <form className="w-full h-14 bg-white rounded-full overflow-hidden">
       <label className="relative w-full h-full flex items-center">
         <span className="sr-only">Search</span>
         <span className="absolute inset-y-0 left-0 flex items-center pl-2">
