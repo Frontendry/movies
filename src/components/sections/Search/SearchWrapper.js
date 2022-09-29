@@ -1,10 +1,14 @@
-import React from "react";
+// Context
+
+// Components
 import SearchForm from "./SearchForm";
+import SearchDropDown from "./SearchDropDown";
 
 const SearchWrapper = () => {
   return (
-    <div>
+    <div className="relative">
       <SearchForm />
+      <SearchDropDown />
     </div>
   );
 };

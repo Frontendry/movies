@@ -1,7 +1,5 @@
-import React from "react";
-
 const SearchDropDown = () => {
-  return <div>SearchDropDown</div>;
+  return <div className="absolute left-0 bottom-0"></div>;
 };
 
 export default SearchDropDown;
