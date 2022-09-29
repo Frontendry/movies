@@ -2,15 +2,15 @@
 import { useFilmsContext } from "../../../context/filmsContextStore";
 
 // Components
-import Movies from "../../general-components/movies";
-import Navigation from "../../general-components/navigation";
+import Movies from "../../general-components/Movies/Movies";
+import SearchWrapper from "../../sections/Search/SearchWrapper";
 
 const Home = () => {
   // Get All Films
   const { allFilms } = useFilmsContext();
   return (
     <div>
-      <Navigation />
+      <SearchWrapper />
       <Movies moviesCollection={allFilms} collectionTitle="Latest Movies" />
     </div>
   );

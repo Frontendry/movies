@@ -6,12 +6,13 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 // Report Vitals
 import reportWebVitals from "./reportWebVitals";
 
-// Main Stylesheet
+// Styles
+import "bootstrap-icons/font/bootstrap-icons.css";
 import "./index.css";
 
 // Components
 import App from "./App";
-import Genre from "./components/pages/Genres";
+import Genre from "./components/pages/Genres/Genres";
 import { FilmsContextProvider } from "./context/filmsContextStore";
 
 const router = createBrowserRouter([
