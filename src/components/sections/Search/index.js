@@ -8,16 +8,16 @@ import SearchDropDown from "./searchDropDown";
 const SearchWrapper = () => {
   return (
     <>
-      <SearchContextProvider>
-        <section className="mt-10 mb-24">
-          <div className="container mx-auto px-7">
-            <div className="relative w-1/2 mx-auto">
+      <section className="mt-10 mb-24">
+        <div className="container mx-auto px-7">
+          <div className="relative w-1/2 mx-auto">
+            <SearchContextProvider>
               <SearchForm />
               <SearchDropDown />
-            </div>
+            </SearchContextProvider>
           </div>
-        </section>
-      </SearchContextProvider>
+        </div>
+      </section>
     </>
   );
 };
