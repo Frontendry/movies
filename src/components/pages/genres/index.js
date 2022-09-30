@@ -6,7 +6,7 @@ import { useFilmsContext } from "../../../context/filmsContextStore";
 
 // Components
 import Movies from "../../general-components/movies";
-import Header from "../../sections/header/header";
+import Header from "../../sections/header";
 import SearchWrapper from "../../sections/search/searchWrapper";
 
 const Genre = () => {
