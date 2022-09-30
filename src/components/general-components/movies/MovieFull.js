@@ -34,7 +34,7 @@ const MovieFull = ({ movieData }) => {
           <div className="grid grid-flow-col auto-cols-max gap-x-3 mt-10">
             {GenreList.map((Genre) => (
               <Link
-                to={`/genre/${Genre.toLowerCase()}`}
+                to={`genre/${Genre.toLowerCase()}`}
                 className="p-2 border border-slate-500 rounded-full text-slate-500"
               >
                 {Genre}

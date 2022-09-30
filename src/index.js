@@ -26,22 +26,24 @@ const router = createBrowserRouter([
         <App />
       </FilmsContextProvider>
     ),
-  },
-  {
-    path: "genre/:genreName",
-    element: (
-      <FilmsContextProvider>
-        <Genre />
-      </FilmsContextProvider>
-    ),
-  },
-  {
-    path: "movie/:imdbId",
-    element: (
-      <FilmsContextProvider>
-        <Movie />
-      </FilmsContextProvider>
-    ),
+    children: [
+      {
+        path: "genre/:genreName",
+        element: (
+          <FilmsContextProvider>
+            <Genre />
+          </FilmsContextProvider>
+        ),
+      },
+      {
+        path: "movie/:imdbId",
+        element: (
+          <FilmsContextProvider>
+            <Movie />
+          </FilmsContextProvider>
+        ),
+      },
+    ],
   },
 ]);
 
