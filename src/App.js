@@ -1,9 +1,9 @@
 import { Routes, Route } from "react-router-dom";
 
 // Components
-import Home from "./components/pages/home";
-import Genre from "./components/pages/genres";
-import Movie from "./components/pages/movie";
+import Home from "./components/pages/home/Home";
+import Genre from "./components/pages/genres/Genres";
+import Movie from "./components/pages/movie/Movie";
 
 function App() {
   return (
