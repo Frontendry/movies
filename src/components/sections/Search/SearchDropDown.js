@@ -1,7 +1,7 @@
 // Context
 import { useSearchContext } from "../../../context/searchContextStore";
-import SearchResults from "./SearchResults";
-import NoSearchResult from "./NoSearchResult";
+import SearchResults from "./searchResults";
+import NoSearchResult from "./noSearchResult";
 
 // Components
 

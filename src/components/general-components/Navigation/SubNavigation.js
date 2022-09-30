@@ -1,5 +1,5 @@
 // Components
-import SubNavigationLink from "./SubNavigationLink";
+import SubNavigationLink from "./subNavigationLink";
 
 const SubNavigation = ({ subItems }) => {
   return (

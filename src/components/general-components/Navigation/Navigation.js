@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 // Context Store
 import { useFilmsContext } from "../../../context/filmsContextStore";
-import SubNavigation from "./SubNavigation";
+import SubNavigation from "./subNavigation";
 
 const Navigation = () => {
   const { allGenres } = useFilmsContext();

@@ -15,8 +15,8 @@ import { FilmsContextProvider } from "./context/filmsContextStore";
 
 // Components
 import App from "./App";
-import Genre from "./components/pages/Genres/Genres";
-import Movie from "./components/pages/Movie/Movie";
+import Genre from "./components/pages/genres/genres";
+import Movie from "./components/pages/movie/movie";
 
 const router = createBrowserRouter([
   {

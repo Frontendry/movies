@@ -1,5 +1,5 @@
 // Movie Instance
-import Movie from "./Movie";
+import Movie from "./movie";
 
 const Movies = ({ moviesCollection, collectionTitle }) => {
   return (

@@ -5,9 +5,9 @@ import { useParams } from "react-router-dom";
 import { useFilmsContext } from "../../../context/filmsContextStore";
 
 // Components
-import Movies from "../../general-components/Movies/Movies";
-import Header from "../../sections/Header/Header";
-import SearchWrapper from "../../sections/Search/SearchWrapper";
+import Movies from "../../general-components/movies/movies";
+import Header from "../../sections/header/header";
+import SearchWrapper from "../../sections/search/searchWrapper";
 
 const Genre = () => {
   // Get Param Name

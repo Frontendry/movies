@@ -2,8 +2,8 @@
 import { SearchContextProvider } from "../../../context/searchContextStore";
 
 // Components
-import SearchForm from "./SearchForm";
-import SearchDropDown from "./SearchDropDown";
+import SearchForm from "./searchForm";
+import SearchDropDown from "./searchDropDown";
 
 const SearchWrapper = () => {
   return (
