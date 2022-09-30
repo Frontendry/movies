@@ -4,7 +4,7 @@ import { useFilmsContext } from "../../../context/filmsContextStore";
 // Components
 import Movies from "../../general-components/movies";
 import Header from "../../sections/header";
-import SearchWrapper from "../../sections/search/searchWrapper";
+import SearchWrapper from "../../sections/search";
 
 const Home = () => {
   // Get All Films
