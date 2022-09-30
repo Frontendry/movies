@@ -4,7 +4,6 @@ const MovieFull = ({ movieData }) => {
   const { PosterNew, Title, Year, Runtime, Plot, Actors, Genre } = movieData;
 
   const GenreList = Genre.split(", ");
-
   return (
     <section>
       <div className="container mx-auto px-7 py-8 flex ">
