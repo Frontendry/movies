@@ -6,7 +6,7 @@ import { useFilmsContext } from "../../../context/filmsContextStore";
 
 // Components
 import Header from "../../sections/header";
-import MovieFull from "../../general-components/movies/movieFull";
+/* import MovieFull from "../../general-components/movies/movieFull"; */
 
 const Movie = () => {
   // Get Param Name
@@ -22,7 +22,7 @@ const Movie = () => {
   return (
     <main className="min-h-screen bg-slate-900">
       <Header />
-      {movieSelected && <MovieFull movieData={movieSelected} />}
+      {/*   {movieSelected && <MovieFull movieData={movieSelected} />} */}
     </main>
   );
 };
