@@ -4,7 +4,7 @@ import { useFilmsContext } from "../../../context/filmsContextStore";
 // Components
 import Movies from "../../general-components/movies";
 import Header from "../../sections/header";
-/* import SearchWrapper from "../sections/search"; */
+import SearchWrapper from "../../sections/search";
 
 const Home = () => {
   // Get All Films
@@ -12,7 +12,7 @@ const Home = () => {
   return (
     <main className="min-h-screen bg-slate-900">
       <Header />
-      {/* <SearchWrapper /> */}
+      <SearchWrapper />
       <Movies moviesCollection={allFilms} collectionTitle="Latest Movies" />
     </main>
   );

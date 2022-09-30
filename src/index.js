@@ -1,7 +1,7 @@
 // Node Modules
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { BrowserRouter as Router } from "react-router-dom";
 
 // Report Vitals
 import reportWebVitals from "./reportWebVitals";
@@ -14,13 +14,9 @@ import "./index.css";
 import { FilmsContextProvider } from "./context/filmsContextStore";
 
 // Components
-//import App from "./App";
+import App from "./App";
 
-import Genre from "./components/pages/genres";
-import Movie from "./components/pages/movie";
-import Home from "./components/pages/home";
-
-const router = createBrowserRouter([
+/* const router = createBrowserRouter([
   {
     path: "/",
     element: (
@@ -45,12 +41,16 @@ const router = createBrowserRouter([
       </FilmsContextProvider>
     ),
   },
-]);
+]); */
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <Router>
+      <FilmsContextProvider>
+        <App />
+      </FilmsContextProvider>
+    </Router>
   </React.StrictMode>
 );
 
