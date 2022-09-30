@@ -32,9 +32,10 @@ const MovieFull = ({ movieData }) => {
           </div>
 
           <div className="grid grid-flow-col auto-cols-max gap-x-3 mt-10">
-            {GenreList.map((Genre) => (
+            {GenreList.map((Genre, index) => (
               <Link
-                to={`genre/${Genre.toLowerCase()}`}
+                to={`/genre/${Genre.toLowerCase()}`}
+                key={`genre_${Genre}_${index}`}
                 className="p-2 border border-slate-500 rounded-full text-slate-500"
               >
                 {Genre}

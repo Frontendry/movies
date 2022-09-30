@@ -7,7 +7,7 @@ const SubNavigationLink = ({ name }) => {
   return (
     <li>
       <Link
-        to={`genre/${linkLowerCased}`}
+        to={`/genre/${linkLowerCased}`}
         className="p-3 border-b border-slate-400 block"
       >
         {name}

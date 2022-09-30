@@ -16,7 +16,7 @@ const Movie = ({ movieData }) => {
       <div className="mt-2">
         {Title && (
           <h3 className="font-bold text-white mb-2">
-            <Link to={`movie/${imdbID}`}>{Title}</Link>{" "}
+            <Link to={`/movie/${imdbID}`}>{Title}</Link>{" "}
           </h3>
         )}
 
