@@ -14,16 +14,18 @@ import "./index.css";
 import { FilmsContextProvider } from "./context/filmsContextStore";
 
 // Components
-import App from "./App";
+//import App from "./App";
+
 import Genre from "./components/pages/genres";
 import Movie from "./components/pages/movie";
+import Home from "./components/pages/home";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: (
       <FilmsContextProvider>
-        <App />
+        <Home />
       </FilmsContextProvider>
     ),
   },
