@@ -30,7 +30,7 @@ const router = createBrowserRouter([
     ),
   },
   {
-    path: "/genre/:genreName",
+    path: "genre/:genreName",
     element: (
       <FilmsContextProvider>
         <Genre />
@@ -38,7 +38,7 @@ const router = createBrowserRouter([
     ),
   },
   {
-    path: "/movie/:imdbId",
+    path: "movie/:imdbId",
     element: (
       <FilmsContextProvider>
         <Movie />
