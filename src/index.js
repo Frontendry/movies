@@ -16,33 +16,6 @@ import { FilmsContextProvider } from "./context/filmsContextStore";
 // Components
 import App from "./App";
 
-/* const router = createBrowserRouter([
-  {
-    path: "/",
-    element: (
-      <FilmsContextProvider>
-        <Home />
-      </FilmsContextProvider>
-    ),
-  },
-  {
-    path: "genre/:genreName",
-    element: (
-      <FilmsContextProvider>
-        <Genre />
-      </FilmsContextProvider>
-    ),
-  },
-  {
-    path: "movie/:imdbId",
-    element: (
-      <FilmsContextProvider>
-        <Movie />
-      </FilmsContextProvider>
-    ),
-  },
-]); */
-
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
