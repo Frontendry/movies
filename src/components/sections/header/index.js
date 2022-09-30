@@ -2,7 +2,7 @@
 import { Link } from "react-router-dom";
 
 // Components
-import Navigation from "../../general-components/navigation/navigation";
+import Navigation from "../../general-components/navigation";
 
 const Header = () => {
   return (

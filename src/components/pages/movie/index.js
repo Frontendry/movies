@@ -5,7 +5,7 @@ import { useParams } from "react-router-dom";
 import { useFilmsContext } from "../../../context/filmsContextStore";
 
 // Components
-import Header from "../../sections/header/header";
+import Header from "../../sections/header";
 import MovieFull from "../../general-components/movies/movieFull";
 
 const Movie = () => {

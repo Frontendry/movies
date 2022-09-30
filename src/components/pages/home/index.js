@@ -2,9 +2,9 @@
 import { useFilmsContext } from "../../../context/filmsContextStore";
 
 // Components
-import Movies from "../../general-components/Movies/Movies";
-import Header from "../../sections/Header/Header";
-import SearchWrapper from "../../sections/Search/SearchWrapper";
+import Movies from "../../general-components/movies";
+import Header from "../../sections/header";
+import SearchWrapper from "../../sections/search/searchWrapper";
 
 const Home = () => {
   // Get All Films
